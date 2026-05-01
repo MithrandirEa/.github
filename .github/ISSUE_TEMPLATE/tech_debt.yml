@@ -23,7 +23,7 @@ body:
     id: context
     attributes:
       label: Contexte et identification de la dette
-      description: Pourquoi ce code nécessite-t-elle une réécriture ? (Exemple : complexité algorithmique, code dupliqué, dépendance obsolète).
+      description: Pourquoi ce code nécessite-t-elle une réécriture ?
     validations:
       required: true
   - type: textarea
