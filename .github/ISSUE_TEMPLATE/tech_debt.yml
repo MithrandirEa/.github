@@ -1,0 +1,52 @@
+name: Refactoring & Dette Technique
+description: Proposer une amélioration du code sans modification fonctionnelle
+title: "[Refactor] : "
+labels: ["tech-debt", "refactoring"]
+body:
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Périmètre technique
+      description: Sélectionnez la couche logicielle concernée par la dette.
+      options:
+        - Backend (API / Logique métier)
+        - Frontend (Interface / Composants)
+        - Base de données (Schéma / Requêtes)
+        - Infrastructure (CI/CD / Déploiement)
+        - Tests (Unitaires / Intégration / Fonctionnels)
+        - Linting & Formatage (Style de code / Conventions)
+        - Documentation (Commentaires / README)
+        - Autre (précisez dans le contexte)
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte et identification de la dette
+      description: Pourquoi ce code nécessite-t-elle une réécriture ? (Exemple : complexité algorithmique, code dupliqué, dépendance obsolète).
+    validations:
+      required: true
+  - type: textarea
+    id: action_plan
+    attributes:
+      label: Plan d'action
+      description: Détaillez les étapes de la refactorisation technique envisagée.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risques de régression et validation
+      description: Quelles parties du système sont susceptibles d'être impactées et comment garantissez-vous une iso-fonctionnalité ?
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Critères de sécurité
+      description: Cochez les éléments validés avant de soumettre cette issue.
+      options:
+        - label: Le code existant est couvert par des tests automatisés permettant de vérifier la non-régression.
+          required: false
+        - label: L'intervention ne modifie ni les contrats d'API ni la structure de la base de données de production.
+          required: false
