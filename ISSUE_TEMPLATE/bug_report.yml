@@ -1,0 +1,30 @@
+name: Rapport de bug
+description: Signaler un dysfonctionnement technique
+title: "[Bug] : "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description du problème
+      description: Décrivez le bug de manière factuelle et précise.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes de reproduction
+      description: Listez les actions exactes pour reproduire le comportement observé.
+      placeholder: |
+        1. Aller sur '...'
+        2. Cliquer sur '....'
+        3. Voir l'erreur
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environnement technique
+      description: Précisez le système d'exploitation, le navigateur, ou la version du logiciel concernée.
+    validations:
+      required: true
