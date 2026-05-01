@@ -32,14 +32,14 @@ body:
       label: Plan d'action
       description: Détaillez les étapes de la refactorisation technique envisagée.
     validations:
-      required: true
+      required: false
   - type: textarea
     id: risks
     attributes:
       label: Risques de régression et validation
       description: Quelles parties du système sont susceptibles d'être impactées et comment garantissez-vous une iso-fonctionnalité ?
     validations:
-      required: true
+      required: false
   - type: checkboxes
     id: constraints
     attributes:
